@@ -9,7 +9,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-	
+
 	private static Scene mainScene;
 
 	@Override
@@ -17,10 +17,10 @@ public class Main extends Application {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
 			ScrollPane scrollpane = loader.load();
-			
+
 			scrollpane.setFitToHeight(true);
 			scrollpane.setFitToWidth(true);
-			
+
 			mainScene = new Scene(scrollpane);
 			primaryStage.setScene(mainScene);
 			primaryStage.setTitle("Sample JavaFX application");
@@ -32,7 +32,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static Scene getMainScene() {
 		return mainScene;
 	}
